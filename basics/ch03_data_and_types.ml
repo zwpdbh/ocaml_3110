@@ -132,5 +132,14 @@ let rec size = function
 ;;
 
 (* Exercise *)
-let concat lst = 
-  List.fold_left (fun acc x -> acc ^ x) "" lst
+let concat lst = List.fold_left (fun acc x -> acc ^ x) "" lst
+
+let take n lst =
+  let rec take_aux acc lst c =
+    match lst with
+    | h :: tail when c <= n-1 && n <> 0 ->
+       take_aux ([h] @ acc) tail (c + 1)
+    | _ -> List.rev acc
+  in
+  take_aux [] lst 0
+;;
