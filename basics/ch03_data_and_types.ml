@@ -4,7 +4,7 @@ Overall, the relationship between a variant and a type in OCaml is that a varian
 that allows you to define a new type with several possible values, 
 and the type of a variant is the type that you define using the variant constructor. *)
 
-let () = print_endline "Hello world!"
+let () = print_endline "Hello world from ch03_data_and_types !"
 
 (* type t1 = C | D 
 type t2 = D | E 
@@ -130,3 +130,7 @@ let rec size = function
   | Leaf -> 0
   | Node (_, l, r) -> 1 + size l + size r
 ;;
+
+(* Exercise *)
+let concat lst = 
+  List.fold_left (fun acc x -> acc ^ x) "" lst
