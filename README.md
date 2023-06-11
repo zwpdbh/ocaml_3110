@@ -6,7 +6,7 @@ Just use it as same as external library.
 
 ### What is a library
 
-A library is a collection of modules produce
+A library is a collection of modules
 
 - A library's name is usually the name of the folder contains the dune file.
 - The dune file simply specifies the compiled result is a library.
@@ -41,15 +41,16 @@ For example, suppose we have above above `dune` file and a file `basics/ch03_dat
     print_endline "Hello, World!"
   ```
 
-### How to use a library in utop
+### How to use a module in utop
 
-- For library from local as source code
+- Local module from source code
 
   ```utop
   #mod_use "basics/ch05_modules.ml";;
+  open Ch05_modules.ListQueue;;
   ```
 
-- For library from external as dependencies
+- External module installed from depend stanza
   ```utop
   #require "yojson";;
   open Yojson;;
