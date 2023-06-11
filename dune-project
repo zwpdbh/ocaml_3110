@@ -19,7 +19,7 @@
  (name ocaml_3110)
  (synopsis "A short synopsis")
  (description "A longer description")
- (depends ocaml dune)
+ (depends ocaml dune ounit2 utop ocaml-lsp-server ocamlformat)
  (tags
   (topics "to describe" your project)))
 
