@@ -137,22 +137,19 @@ let concat lst = List.fold_left (fun acc x -> acc ^ x) "" lst
 let take n lst =
   let rec take_aux acc lst c =
     match lst with
-    | h :: tail when c <= n-1 && n <> 0 ->
-       take_aux ([h] @ acc) tail (c + 1)
+    | h :: tail when c <= n - 1 && n <> 0 -> take_aux ([ h ] @ acc) tail (c + 1)
     | _ -> List.rev acc
   in
   take_aux [] lst 0
 ;;
 
-let drop n lst = 
-  let rec drop_aux lst c = 
-    match lst with 
-    | _ :: tail when c <= n - 1 && n <> 0 -> 
-      drop_aux tail (c + 1)
+let drop n lst =
+  let rec drop_aux lst c =
+    match lst with
+    | _ :: tail when c <= n - 1 && n <> 0 -> drop_aux tail (c + 1)
     | rest -> rest
-  in 
-  drop_aux lst 0 ;;
+  in
+  drop_aux lst 0
+;;
 
-drop 3 [1; 2; 3; 4; 5]
-    
-    
+drop 3 [ 1; 2; 3; 4; 5 ]
