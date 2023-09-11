@@ -21,7 +21,7 @@ A library is a collection of modules
 
 ### How to use it
 
-For example, suppose we have above above `dune` file and a file `basics/ch03_data_and_types.ml`, it will become `Ch03_data_and_types` module in library `Basic`.
+For example, suppose we have above `dune` file and a file `basics/ch03_data_and_types.ml`, it will become `Ch03_data_and_types` module in library `Basic`.
 
 - At last, we just specify the library name in the libraries stanza in a bin project as:
 
